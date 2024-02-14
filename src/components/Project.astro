@@ -1,0 +1,51 @@
+---
+import LinkIcon from '../icons/link.astro'
+import GithubIcon from '../icons/linkedin.astro'
+import type { ProjectInterface } from '../utils/project-data'
+
+interface Props extends ProjectInterface {}
+
+const {
+  title,
+  description,
+  tecnologies,
+  image,
+  github,
+  demo
+} = Astro.props
+
+const paragraphs: string[] = description.split('\n\n')
+---
+
+<article class="flex flex-col gap-3 bg-[#1e212b] px-3 py-5 rounded-md group/project">
+  <header class="h-60 object-cover relative">
+    <img
+      class="size-full rounded-md"
+      src={image} 
+      alt={ title + ' project image' }
+    >
+    <div class="flex gap-3 absolute bottom-2 right-2">
+      <a href={demo} target="_blank" class="bg-white text-black p-1 rounded-full hover:bg-black hover:text-white transition">
+        <LinkIcon />
+      </a>
+      <a href={github} target="_blank" class="bg-white text-black p-1 rounded-full hover:bg-black hover:text-white transition">
+        <GithubIcon />
+      </a>
+    </div>
+  </header>
+  <div>
+    <h3 class="font-semibold text-2xl mb-3">Todo App</h3>
+    <div class="flex flex-col gap-2 w-11/12 text-gray-400">
+      {paragraphs.map(text => <p>{text}</p>)}
+    </div>
+  </div>
+  <footer class="mt-4">
+    <ul class="flex gap-3 justify-center flex-wrap font-medium text-xs">
+      {tecnologies.map(tecnology => (
+        <li class="py-1 px-3 bg-white/20 rounded-full border border-white">
+          {tecnology}
+        </li>
+      ))}
+    </ul>
+  </footer>
+</article>

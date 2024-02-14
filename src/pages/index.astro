@@ -1,0 +1,184 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { data } from '../utils/project-data'
+
+// icons
+import GithubIcon from '../icons/linkedin.astro'
+import LinkedinIcon from '../icons/github.astro'
+import JsIcon from '../icons/javascript.astro'
+import TsIcon from '../icons/typescript.astro'
+import PythonIcon from '../icons/python.astro'
+import PhpIcon from '../icons/php.astro'
+import ReactIcon from '../icons/react.astro'
+import SvelteIcon from '../icons/svelte.astro'
+import NodeIcon from '../icons/node.astro'
+import DjangoIcon from '../icons/django.astro'
+import LaravelIcon from '../icons/laravel.astro'
+import PostgreSqlIcon from '../icons/postgresql.astro'
+import MongodbIcon from '../icons/mongodb.astro'
+import PhoneIcon from '../icons/phone.astro'
+import MenuIcon from '../icons/menu.astro'
+
+// components
+import Project from '../components/Project.astro'
+---
+
+<Layout title="Portafolio Sebastian">
+	<nav id="nav" class="w-fit mx-auto flex items-center gap-4 sticky top-2 z-10 h-10 px-8 rounded-full bg-[#12141B] text-sm max-sm:text-xs">
+		<a href="#home" class="text-white font-medium hover:text-[#FFB800] transition">
+			Home
+		</a>
+		<a href="#skills" class="text-white font-medium hover:text-[#FFB800] transition">
+			Skills
+		</a>
+		<a href="#projects" class="text-white font-medium hover:text-[#FFB800] transition">
+			Projects
+		</a>
+		<a href="#about-me" class="text-white font-medium hover:text-[#FFB800] transition">
+			About Me
+		</a>
+		<a href="mailto:sebasmorales05col@gmail.com" class="text-white font-medium hover:text-[#FFB800] transition">
+			Contact Me
+		</a>
+	</nav>
+	<main>
+		<section id="home" class="w-4/5 max-lg:w-11/12 mx-auto min-h-screen grid place-content-center text-white">
+			<div class="flex justify-center mb-8">
+				<span class="bg-green-500/60 border-2 border-green-600 py-1 px-3 rounded-2xl text-xs font-medium animate-pulse">
+					Available To Work
+				</span>
+			</div>
+			<h1 class="text-4xl max-lg:text-3xl max-sm:text-2xl font-semibold flex flex-col text-center gap-2 mb-5">
+				<span>Hi, I Am <span class="text-[#FFB800]">Sebastian</span>  🇨🇴</span>
+				<span class="text-5xl max-lg:text-4xl max-sm:text-3xl">Creative <span class="text-[#FFB800]">FullStack Web Developer</span></span>
+			</h1>
+			<p class="text-center text-balance text-gray-300 mb-10">
+				passionate about developing functional web applications.
+			</p>
+			<div class="flex justify-center gap-4 mb-28 max-md:mb-44">
+				<div class="flex gap-2">
+					<a href="#" target="_blank" class="p-0.5 bg-blue-500 rounded-md">
+						<LinkedinIcon class="size-10" />
+					</a>
+					<a href="https://github.com/SebasMorales1" target="_blank" class="p-0.5 bg-black rounded-md">
+						<GithubIcon class="size-10" />
+					</a>
+				</div>
+				<a href="#" class="py-1 px-10 font-medium rounded-full flex items-center border-2 hover:bg-white/10">
+					Download CV
+				</a>
+			</div>
+		</section>
+
+		<section id="skills" class="bg-[#202430] py-14">
+			<div class="w-4/5 max-lg:w-11/12 mx-auto">
+				<h2 class="text-4xl font-semibold text-center text-white/75 mb-12">
+					<span class="text-[#FFB800]">&lt;</span> Skills <span class="text-[#FFB800]">/&gt;</span>
+				</h2>
+
+				<ul class="grid grid-cols-[repeat(auto-fit,_minmax(150px,1fr))] gap-4">
+					<li class="bg-[#272A37] rounded p-1 text-gray-600 hover:bg-yellow-500 hover:text-white transition grid place-content-center">
+						<JsIcon class="size-20" />
+					</li>
+					<li class="bg-[#272A37] rounded p-1 text-gray-600 hover:bg-blue-500 hover:text-white transition grid place-content-center">
+						<TsIcon class="size-20" />
+					</li>
+					<li class="bg-[#272A37] rounded p-1 text-gray-600 hover:bg-gradient-to-r hover:from-blue-500 hover:to-yellow-500 hover:text-white transition grid place-content-center">
+						<PythonIcon class="size-20" />
+					</li>
+					<li class="bg-[#272A37] rounded p-1 text-gray-600 hover:bg-[#484C89] hover:text-white transition grid place-content-center">
+						<PhpIcon class="size-20" />
+					</li>
+					<li class="bg-[#272A37] rounded p-1 text-gray-600 hover:bg-blue-500 hover:text-white transition grid place-content-center">
+						<ReactIcon class="size-20" />
+					</li>
+					<li class="bg-[#272A37] rounded p-1 text-gray-600 hover:bg-orange-500 hover:text-white transition grid place-content-center">
+						<SvelteIcon class="size-20" />
+					</li>
+					<li class="bg-[#272A37] rounded p-1 text-gray-600 hover:bg-green-600 hover:text-white transition grid place-content-center">
+						<NodeIcon class="size-20" />
+					</li>
+					<li class="bg-[#272A37] rounded p-1 text-gray-600 hover:bg-emerald-600 hover:text-white transition grid place-content-center">
+						<DjangoIcon class="size-20" />
+					</li>
+					<li class="bg-[#272A37] rounded p-1 text-gray-600 hover:bg-red-500 hover:text-white transition grid place-content-center">
+						<LaravelIcon class="size-20" />
+					</li>
+					<li class="bg-[#272A37] rounded p-1 text-gray-600 hover:bg-sky-600 hover:text-white transition grid place-content-center">
+						<PostgreSqlIcon class="size-20" />
+					</li>
+					<li class="bg-[#272A37] rounded p-1 text-gray-600 hover:bg-green-700 hover:text-white transition grid place-content-center">
+						<MongodbIcon class="size-20" />
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="projects" class="w-4/5 max-lg:w-11/12 mx-auto py-14 text-white">
+			<h2 class="text-4xl font-semibold text-center text-white/75 mb-12">
+				<span class="text-[#FFB800]">&lt;</span> Projects <span class="text-[#FFB800]">/&gt;</span>
+			</h2>
+
+			<div class="grid grid-cols-[repeat(auto-fit,_minmax(280px,344px))] gap-4 justify-center">
+				{data.map(project => (
+					<Project
+						title={project.title}
+						description={project.description}
+						tecnologies={project.tecnologies}
+						image={project.image}
+						github={project.github}
+						demo={project.demo}
+					/>
+				))}
+			</div>
+		</section>
+
+		<section class="bg-[#202430] py-12">
+			<div id="about-me" class="w-4/5 max-lg:w-11/12 mx-auto">
+				<h2 class="text-4xl font-semibold text-center text-white/75 mb-12">
+					<span class="text-[#FFB800]">&lt;</span> About Me <span class="text-[#FFB800]">/&gt;</span>
+				</h2>
+
+				<div class="flex gap-4 items-center max-sm:flex-col max-sm:gap6">
+					<div class="w-3/4 max-lg:w-11/12 text-gray-400 flex flex-col gap-2 text-balance">
+						<p>
+							My name is Juan Sebastian. I began programming in 2021, teaching myself along the way. I enrolled in the <span class="text-yellow-300">software development technical</span> track at my former school. Much of what I've learned has been through self-teaching.
+						</p>
+						<p>
+							Some of my successes so far include collaborating on a group project to develop an app focused on tourism for my neighborhood, Comuna 13, which served as our final project in the technical track. Additionally, <span class="text-yellow-300">I led my team to victory in the competitive programming intercollegiate tournament in Medellín.</span>
+						</p>
+					</div>
+					<picture class="size-64 p-3 shadow-[5px_10px_2px_rgb(30,33,40)] rounded-md rotate-2">
+						<img 
+							class="rounded-lg size-full max-w-full object-cover" 
+							src="./theRock.jpg"
+							alt="me photo"
+						>
+					</picture>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="py-4 text-gray-300 w-4/5 max-lg:w-11/12 mx-auto">
+		<div class="px-4 py-3 bg-[#12141B] rounded-full text-sm flex justify-between max-md:flex-col max-md:gap-5 max-md:rounded-md">
+			<p>
+				@ {new Date().getFullYear()} Juan Sebastian. All Rights Recerved
+			</p>
+			<div class="flex gap-4">
+				<a 
+					href="tel:+57307009099"
+					class="hover:underline hover:text-[#FFB800] flex gap-0.5 items-center"
+				>
+					<PhoneIcon />
+					<span>(+57) 3207009099</span>
+				</a>
+				<a 
+					href="mailto:sebasmorales05col@gmail.com"
+					class="hover:underline hover:text-[#FFB800]"
+				>
+					Contact Me
+				</a>
+			</div>
+		</div>
+	</footer>
+</Layout>
